@@ -1,6 +1,4 @@
 #!/bin/bash 
-#!/bin/bash 
-
 
 if [ $# -ne 1 ]; then
     echo "usage: sh -x loginC1H1H2_initial.sh restart  : restart"

@@ -12,7 +12,7 @@ def generate_new_topofile():
     oFile = open('topoNew.txt', 'w')
     #login to machine and autobuild
     for machine in machines:
-        COMMAND ="cd /users/xuemei && ifconfig > ifconfig.out.{0}" .format(machine)
+        COMMAND ="cd /users/xuemei/deterlab_script && ifconfig > ifconfig.out.{0}" .format(machine)
         ssh = subprocess.Popen(["ssh", "%s.mscm.vcrib" % machine, COMMAND],
                                 shell=False,
                                 stdout=subprocess.PIPE,
