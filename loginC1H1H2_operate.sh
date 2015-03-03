@@ -12,10 +12,10 @@ if [ "$1" == "restart" ]; then
         nohup ./controller > foo.out 2> foo.err < /dev/null &"
 
     #2. host2 h2.mscm.vcrib
-    ssh h2.mscm.vcrib "python dumpAndCheckAtH2.py"
+    ssh h2.mscm.vcrib "cd /users/xuemei/deterlab_script; python dumpAndCheckAtH2.py"
 
     #3. host1 h1.mscm.vcrib
-    ssh h1.mscm.vcrib "python replayAtH1.py"
+    ssh h1.mscm.vcrib "cd /users/xuemei/deterlab_script; python replayAtH1.py"
 elif [ "$1" == "stop" ]; then
     #1. controller c1.mscm.vcrib
     ssh c1.mscm.vcrib "sudo pkill controller"

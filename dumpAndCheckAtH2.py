@@ -14,7 +14,7 @@ commands.getstatusoutput(COMMAND)
 
 
 #get the port name of h1
-file=open("/users/xuemei/topoNew.txt", 'r')
+file=open("/users/xuemei/deterlab_script/topoNew.txt", 'r')
 lines=file.readlines()
 lines=map(lambda x:x[:-1], lines)
 h2Port='eth0'
